@@ -1,0 +1,476 @@
+/*
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Rubik Dirt', sans-serif;
+    font-family: 'Marck Script', sans-serif;
+*/
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: none; /* Скрыта изначально, появится при прокрутке вниз */
+  }
+  
+  #scrollToTop:hover {
+    background-color: #555;
+  }
+  
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1440px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+::-moz-selection {
+    background: black;
+    color: white;
+     text-shadow: none;
+}
+::selection {
+    background: black;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+main {
+    margin-bottom: 1000px;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+h1:hover {
+    -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+    transform:scale(1.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+.nav-item {
+    position: relative;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: none;
+    transition: all 0.7s ease;
+  }
+  
+.nav-item:hover {
+    color: rgba(51, 218, 255, 0.9);
+  }
+  
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    width: 0;
+    height: 0.15rem;
+    transform: translateX(-50%);
+    background-color: rgb(168, 239, 255, 0.9);
+    transition: all 0.7s ease;
+  }
+  
+.nav-item:hover::after {
+    width: 100%;
+  }
+
+.aboutmesection {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.aboutmesection__leftside {
+    width: 50%;
+    border-right: 1px solid black;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.aboutmesection__leftside p {
+
+    transition: color 0.3s;
+}
+
+.aboutmesection__rightside {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutmesection__rightside img {
+    border-radius: 200px;
+}
+
+.aboutmesection__leftside span:hover {
+    color: black;
+    font-weight: 500;
+}
+
+.aboutmesection__rightside img { 
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.aboutmesection__rightside img:hover {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.portfolio {
+    margin-top: 140px;
+}
+
+h2 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+.portfolio__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__content_line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.portfolio__content_block {
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio__content_blocktxt {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.portfolio__content_blocktxt:hover {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+.portfolio p{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.image1 {
+    background-image: url(images/man1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute; 
+    height: 450px; 
+    width: 450px; 
+}
+
+.image2 {
+    background-image: url(images/woman1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    position: absolute; 
+    height: 450px; 
+    width: 450px; 
+}
+
+.image3 {
+    background-image: url(images/woman2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    z-index: -1;
+    position: absolute; 
+    height: 450px; 
+    width: 450px;  
+}
+
+
+.blur_img {
+    filter: blur(2px); 
+}
+
+.portfolio__undercontent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio__undercontent h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.portfolio__undercontent a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    border-top: 0px solid black;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    font-weight: 400;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 15px;
+}
+
+.foooter__content {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.foooter__content1 {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__content_images {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.footer__content_number {
+    width: 1400px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__content_siteinfo {
+    width: 200px;
+    margin-right: 10px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__content_siteinfo a{
+    color: #595959;
+    text-decoration: none;
+}
+
+.section__service {
+    margin-top: 100px;
+}
+
+.section__service-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__service-block {
+    width: 450px;
+    height: 600px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__service-block h3 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.imagecar {
+    background-image: url(images/car.jpg);
+    font-family: 'Monda', sans-serif;
+    font-size: 30px;
+}
+
+.imagelive {
+    background-image: url(images/woman3.jpg);
+    font-family: 'Rubik Dirt', sans-serif;
+    font-size: 30px;
+}
+
+.imagelove {
+    background-image: url(images/woman4.jpg);
+    font-family: 'Marck Script', sans-serif;
+    font-size: 40px;
+}
+
+.imagelove h3 {
+    margin-top: 40px;
+}
+
+.imagelive h3 {
+    margin-top: 53px;
+}
+
+.imagecar h3 {
+    margin-top: 45px;
+}
+
+.contentbox {
+    width: 350px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+    opacity: 0.8;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.serviceblock-topic {
+    height: 150px;
+}
+
+.buttoninbox {
+    width: 100%;
+    background-color: white;
+    color: black;
+}
+
+.buttoninbox span {
+    color: white;
+    background-color: black;
+    font-weight: 700;
+}
+
+.buttonform form{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonform button{
+    background-color: black;
+    opacity: 1;
+    height: 40px;
+    border: 0;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.buttonform input{
+    background-color: white;
+    opacity: 1;
+    height: 30px;
+    border: 0;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Rubik Dirt', sans-serif;
+    font-family: 'Marck Script', sans-serif;
+*/
